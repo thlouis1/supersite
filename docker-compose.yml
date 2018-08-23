@@ -1,1 +1,11 @@
+version: "3.3"
+services:
+wordpress:
+image: wordpress:latest
+ports:
+- 8080:80
+volumes:
+- ./data/wordpress:/var/www/html
+environment:
+- WORDPRESS_DB_HOST=db:3306
 
